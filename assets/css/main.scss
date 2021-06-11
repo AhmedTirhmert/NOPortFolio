@@ -1,0 +1,327 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+.flex-reversed {
+  flex-direction: row-reverse !important;
+}
+.nav-container {
+  a {
+    color: white;
+  }
+}
+header {
+  background-color: #6700ee;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  .logo {
+    color: #00f7ff;
+    font-weight: bold;
+  }
+  ul {
+    display: inline-flex;
+    a {
+      display: block;
+      padding: 0 1em;
+    }
+  }
+}
+.socials-container {
+  display: none;
+}
+.hero {
+  color: white;
+  display: grid;
+  text-align: center;
+
+  .hero-design {
+    display: none;
+  }
+  .content {
+    padding: 4em;
+    background-color: #6700ff;
+    .meet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ff64cb;
+    }
+    .scrollDown {
+      width: 50px;
+      height: 50px;
+      fill: white;
+      animation: scrollDownBounce 1s ease-in-out infinite alternate;
+    }
+    span {
+      margin: auto 1rem;
+    }
+  }
+}
+
+.featured {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: #e8dcf8;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 10vh;
+    left: 10vh;
+    z-index: -1;
+  }
+  .subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6e00ff;
+    font-size: 0.85em;
+    letter-spacing: 0.2em;
+  }
+  .featured-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  .featured-desc {
+    color: #252525;
+    margin-bottom: 3em;
+    font-size: 1.3em;
+    line-height: 1.8em;
+    font-weight: 500;
+  }
+  img {
+    aspect-ratio: 1/1;
+    background-size: cover;
+  }
+}
+.skills {
+  background-color: #ff64cb;
+  .skills-container {
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1.2em;
+      li {
+        background-color: white;
+        border-radius: 1em;
+        padding: 2em 2em;
+        position: relative;
+        z-index: 0;
+        overflow: hidden;
+        .icon-container {
+          font-size: 3em;
+          color: #6700ee;
+          margin-bottom: 0.85em;
+        }
+        .skill-title {
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+        .skill-desc {
+          color: #252525;
+          margin-bottom: 1.2em;
+        }
+      }
+    }
+  }
+}
+.portfolio {
+  .portfolio-container {
+    padding: 0.5em 1em;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(37, 37, 37, 0.061);
+    border-radius: 1em;
+    box-shadow: 0 0 10px 5px rgba(37, 37, 37, 0.061);
+    margin-bottom: 1.5em;
+    .subtitle {
+      margin-top: 2em;
+      color: #6e00ff;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .featured-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: -0.5em;
+    }
+    .featured-desc {
+      color: #252525;
+      line-height: 1.7em;
+      margin-bottom: 2.5em;
+    }
+    a {
+      display: block;
+      img {
+        aspect-ratio: 1;
+        border-radius: 1em;
+      }
+    }
+  }
+}
+
+// DESKTOP VERSION
+@media screen and (min-width: 1224px) {
+  .nav-container {
+    display: grid;
+    grid-template-columns: auto 34%;
+    header {
+      .logo {
+        margin-left: 10vw;
+      }
+    }
+    .socials-container {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      ul {
+        display: flex;
+        gap: 2em;
+        font-size: 1.4em;
+      }
+    }
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: auto 34%;
+    height: 100vh;
+    .content {
+      text-align: left;
+      padding-left: calc(10vw + 2em);
+      h1 {
+        margin-top: 1em;
+        font-size: 3em;
+        line-height: 1.2em;
+      }
+      .meet {
+        justify-content: start;
+        span {
+          margin: 0 1em 0 0;
+        }
+      }
+      .scrollDown {
+        width: 5em;
+        height: 5em;
+        margin-left: -1.5em;
+        margin-top: 2em;
+      }
+    }
+    .hero-design {
+      display: block;
+      width: 100%;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: -50%;
+      g {
+        rect {
+        }
+      }
+    }
+  }
+  .featured {
+    padding: 0;
+    display: flex;
+    position: relative;
+    &::before {
+      top: 10vh;
+      left: 20vh;
+    }
+    img {
+      position: absolute;
+      width: 45%;
+      height: 90%;
+      top: 10%;
+      right: 2%;
+      z-index: 1;
+      transform: rotate(5deg);
+      box-shadow: 0 0 5px 2px rgba(37, 37, 37, 0.3);
+    }
+    .left {
+      width: 30%;
+      height: 100%;
+      text-align: left;
+      font-size: 0.9em;
+      padding: 7.5em 0em 2em 15em;
+    }
+  }
+  .skills {
+    padding: 0;
+    position: relative;
+    min-height: 370px;
+    display: flex;
+    margin-bottom: 6em;
+    .skills-container {
+      ul {
+        flex-direction: row;
+        position: absolute;
+        top: 25%;
+        left: 15%;
+        right: 15%;
+        li {
+          box-shadow: 0 0 10px 5px rgba(37, 37, 37, 0.061);
+        }
+      }
+    }
+  }
+  .portfolio-container {
+    background-color: white !important;
+    border: unset !important;
+    box-shadow: unset !important;
+    display: flex;
+    .portfolio-left {
+      width: 65%;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      .inner {
+        padding: 0 2em 0 10em;
+      }
+    }
+    a {
+      img {
+        width: 75%;
+        height: 100%;
+        aspect-ratio: 18/9 !important;
+      }
+    }
+  }
+}
+@keyframes scrollDownBounce {
+  to {
+    transform: translateY(50px);
+  }
+}
+@keyframes hero-design-zoom {
+  from {
+    width: 0;
+    height: 0;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
